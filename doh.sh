@@ -61,7 +61,7 @@ install(){
     if [ "${OS}" == 'CentOS' ];then
         yum install epel-release -y
         yum install -y wget curl tar
-        wget "https://github.com/AdguardTeam/dnsproxy/releases/download/${VERSION}/dnsproxy-linux-${ARCHV}-${VERSION}.tar.gz" -O /tmp/dnsproxy.tar.gz
+        wget "https://ghproxy.com/https://github.com/AdguardTeam/dnsproxy/releases/download/${VERSION}/dnsproxy-linux-${ARCHV}-${VERSION}.tar.gz" -O /tmp/dnsproxy.tar.gz
         tar -xzvf /tmp/dnsproxy.tar.gz -C /tmp/
         mv /tmp/linux-${ARCHV}/dnsproxy /usr/bin/dnsproxy
         chmod +x /usr/bin/dnsproxy
@@ -69,7 +69,7 @@ install(){
     else
         apt-get -y update
         apt-get install -y wget curl tar
-        wget "https://github.com/AdguardTeam/dnsproxy/releases/download/${VERSION}/dnsproxy-linux-${ARCHV}-${VERSION}.tar.gz" -O /tmp/dnsproxy.tar.gz
+        wget "https://ghproxy.com/https://github.com/AdguardTeam/dnsproxy/releases/download/${VERSION}/dnsproxy-linux-${ARCHV}-${VERSION}.tar.gz" -O /tmp/dnsproxy.tar.gz
         tar -xzvf /tmp/dnsproxy.tar.gz -C /tmp/
         mv /tmp/linux-${ARCHV}/dnsproxy /usr/bin/dnsproxy
         chmod +x /usr/bin/dnsproxy
@@ -80,7 +80,7 @@ install(){
 tips(){
     echo -e "${Green}done!${Font}"
     echo -e "${Blue}请将 /etc/resolv.conf 改为 nameserver 127.0.0.1${Font}"
-    echo -e "${Blue}可使用 bash <(curl -sSL "https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/lockdns.sh") 锁定DNS${Font}"
+    echo -e "${Blue}可使用 bash <(curl -sSL "https://ghproxy.com/https://raw.githubusercontent.com/archer9812/Fast-DoH/master/lockdns.sh") 锁定DNS${Font}"
     echo -e "${Blue}如遇53端口占用请查看 https://www.moeelf.com/archives/270.html 或卸载其他 DNS 程序${Font}"
 }
 
@@ -94,7 +94,7 @@ main(){
 
 dnspod(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/dnspod.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/dnspod.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -103,7 +103,7 @@ dnspod(){
 
 aliyun(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/aliyun.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/aliyun.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -112,7 +112,7 @@ aliyun(){
 
 cloudflare(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/cloudflare.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/cloudflare.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -121,7 +121,7 @@ cloudflare(){
 
 google(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/google.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/google.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -130,7 +130,7 @@ google(){
 
 dnssb(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/dnssb.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/dnssb.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -139,7 +139,7 @@ dnssb(){
 
 nextdns(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/nextdns.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/nextdns.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -148,7 +148,7 @@ nextdns(){
 
 iqdnseast(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/iqdnseast.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/iqdnseast.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -157,7 +157,7 @@ iqdnseast(){
 
 iqdnssouth(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/iqdnssouth.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/iqdnssouth.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
@@ -166,7 +166,7 @@ iqdnssouth(){
 
 moedns(){
     main
-    wget -O /etc/systemd/system/dnsproxy.service https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/moedns.service
+    wget -O /etc/systemd/system/dnsproxy.service https://ghproxy.com/https://raw.githubusercontent.com/9bingyin/Fast-DoH/master/services/moedns.service
     systemctl daemon-reload
     systemctl restart dnsproxy
     systemctl enable dnsproxy
