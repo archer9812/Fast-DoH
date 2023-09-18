@@ -9,7 +9,7 @@
 ## 使用
 
 ```
-bash <(curl -sSL "https://raw.githubusercontent.com/9bingyin/Fast-DoH/main/doh.sh")
+bash <(curl -sSL "https://ghproxy.com/https://raw.githubusercontent.com/archer9812/Fast-DoH/main/doh.sh")
 ```
 
 ## 鸣谢
